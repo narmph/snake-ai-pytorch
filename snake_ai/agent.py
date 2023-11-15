@@ -102,6 +102,7 @@ def train():
     plot_scores = []
     plot_mean_scores = []
     total_score = 0
+    record = 0
     agent = Agent()
     game = SnakeGameAI()
     while True:
@@ -129,7 +130,7 @@ def train():
 
             if score > record:
                 record = score
-                # agent.model.save()
+                agent.model.save()
 
             print('Game: ', agent.n_games,' | Score: ', score,' | Record: ', record)
             
